@@ -1,7 +1,16 @@
+import BasePage from "./basePage";
 import inventoryItem from "./inventoryItem";
 
-class InventoryPage {
+class InventoryPage extends BasePage {
   url = cy.config().baseUrl + "/inventory.html";
+
+  checkoutButton() {
+    return cy.get("#checkout");
+  }
+
+  checkout() {
+    return this.checkoutButton().click()
+  }
 
   orderProductsDropdown() {
     return cy.get('[data-test="product_sort_container"]');
@@ -12,15 +21,15 @@ class InventoryPage {
   }
 
   nthItem(index) {
-    return new inventoryItem(index)
+    return new inventoryItem(index);
   }
 
   firstItem() {
-    return this.nthItem(1)
+    return this.nthItem(1);
   }
 
   lastItem() {
-    return this.nthItem(-1)
+    return this.nthItem(-1);
   }
 }
 export default new InventoryPage();

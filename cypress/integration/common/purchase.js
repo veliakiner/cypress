@@ -18,8 +18,8 @@ When("the user adds the cheapest and costliest items to the basket", () => {
   InventoryPage.lastItem().addToBasket()
 });
 When("the user checks out their basket", () => {
-  cy.get("#shopping_cart_container").click();
-  cy.get("#checkout").click();
+  InventoryPage.goToBasket()
+  InventoryPage.checkout()
 });
 When("the user supplies their shipping details", () => {
   cy.get("#first-name").type("Joe");
