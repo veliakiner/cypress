@@ -39,3 +39,6 @@ Then("the user sees an option to navigate to the home page", () => {
   cy.get("#back-to-products").should("be.visible").click();
   cy.url().should("eq", cy.config().baseUrl + "/inventory.html");
 });
+Then("the user's cart is empty", () => {
+  // fill out later
+})

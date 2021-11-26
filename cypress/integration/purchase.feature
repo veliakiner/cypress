@@ -8,3 +8,4 @@ Feature: Shopping cart
         And the user submits their purchase
         Then the user sees a dispatch confirmation
         And the user sees an option to navigate to the home page
+        And the user's cart is empty
