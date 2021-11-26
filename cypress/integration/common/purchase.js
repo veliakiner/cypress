@@ -1,4 +1,5 @@
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
+import BasketPage from "../../pageObjects/basketPage";
 import InventoryPage from "../../pageObjects/inventoryPage";
 import LoginPage from "../../pageObjects/loginPage";
 
@@ -19,7 +20,7 @@ When("the user adds the cheapest and costliest items to the basket", () => {
 });
 When("the user checks out their basket", () => {
   InventoryPage.goToBasket()
-  InventoryPage.checkout()
+  BasketPage.checkout()
 });
 When("the user supplies their shipping details", () => {
   cy.get("#first-name").type("Joe");
