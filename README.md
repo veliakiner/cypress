@@ -12,6 +12,9 @@ Then install the repository's dependencies:
 # Usage
 `npm run test`
 
+# Debugging
+Video recordings and screenshots are available in `./cypress/video` and `./cypress/screenshots` respectively. An HTML report of the test run (including stack trace) can be found in `./mochawesome-report`.
+
 For debugging with a browser window:
 
 `npm run debug`
