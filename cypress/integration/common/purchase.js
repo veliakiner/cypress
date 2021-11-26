@@ -21,6 +21,7 @@ When("the user adds the cheapest and costliest items to the basket", () => {
 });
 When("the user checks out their basket", () => {
   InventoryPage.basketButton().click();
+  BasketPage.items().its("length").should("eq", 2);
   BasketPage.checkoutButton().click();
 });
 When("the user supplies their shipping details", () => {
@@ -39,5 +40,6 @@ Then("the user sees an option to navigate to the home page", () => {
   cy.url().should("eq", InventoryPage.url);
 });
 Then("the user's cart is empty", () => {
-  // TODO
+  InventoryPage.basketButton().click();
+  BasketPage.items().should('not.exist');
 });

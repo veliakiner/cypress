@@ -8,5 +8,9 @@ class BasketPage extends BasePage {
   checkout() {
     return this.checkoutButton().click()
   }
+
+  items() {
+    return cy.get(".cart_list").find('.cart_item')
+  }
 }
 export default new BasketPage();
