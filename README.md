@@ -1,5 +1,5 @@
 # Installation
-After cloning the repository, install npx:
+After cloning the repository, ensure you have a recent version of npm installed, and then install npx:
 
 `npm install -g npx`
 
