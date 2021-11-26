@@ -1,6 +1,6 @@
 import { When, Then } from "cypress-cucumber-preprocessor/steps";
 
-When("I login", () => {
+When("a user is logged in to Saucedemo", () => {
   cy.loginWith({ email: "user@example.org", password: "this is my password" });
 });
 Then("the url is {word}", (url) => {
