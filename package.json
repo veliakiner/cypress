@@ -4,13 +4,16 @@
   "description": "Write an end-to-end test using <member-of-cupressacae> and <member-of-cucurbitaceae>",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run"
+    "test": "npx cypress run",
+    "debug": "npx cypress open",
+    "test no-report": "npx cypress run --reporter junit --reporter-options 'mochaFile=results/my-test-output.xml,toConsole=true'"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^9.1.0",
-    "cypress-cucumber-preprocessor": "^4.3.0"
+    "cypress-cucumber-preprocessor": "^4.3.0",
+    "mochawesome": "^7.0.1"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
