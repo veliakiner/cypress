@@ -6,11 +6,11 @@ After cloning the repository:
 `npm install`
 
 # Usage
-`npx cypress run`
+`npm run test`
 
 For debugging with a browser window:
 
-`npx cypress open`
+`npm run debug`
 
 Then navigate the UI to run any tests you would like to debug.
 

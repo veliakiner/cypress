@@ -4,9 +4,9 @@
   "description": "Write an end-to-end test using <member-of-cupressacae> and <member-of-cucurbitaceae>",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run",
+    "test": "npx cypress run --reporter junit --reporter-options 'mochaFile=results/my-test-output.xml,toConsole=true'",
     "debug": "npx cypress open",
-    "test no-report": "npx cypress run --reporter junit --reporter-options 'mochaFile=results/my-test-output.xml,toConsole=true'"
+    "test-no-report": "npx cypress run"
   },
   "author": "",
   "license": "ISC",
