@@ -1,7 +1,5 @@
 
 class BasePage {
-  url = cy.config().baseUrl + "/inventory.html";
-
   basketButton() {
     return cy.get("#shopping_cart_container");
   }
