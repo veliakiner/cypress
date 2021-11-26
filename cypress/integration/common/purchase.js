@@ -39,5 +39,5 @@ Then("the user sees an option to navigate to the home page", () => {
   cy.url().should("eq", InventoryPage.url);
 });
 Then("the user's cart is empty", () => {
-  // fill out later
+  // TODO
 });
