@@ -1,5 +1,5 @@
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
-import Inventorypage from "../../pageObjects/inventoryPage";
+import InventoryPage from "../../pageObjects/inventoryPage";
 import LoginPage from "../../pageObjects/loginPage";
 
 
@@ -7,11 +7,11 @@ Given("a user is logged in to Saucedemo", () => {
   cy.visit("/");
   cy.fixture("user").then((user) => {
     LoginPage.login(user.username, user.password)
-    cy.url().should("eq", Inventorypage.url);
+    cy.url().should("eq", InventoryPage.url);
   });
 });
 Given("the products for sale are sorted by price descending", () => {
-  cy.get('[data-test="product_sort_container"]').select("hilo");
+  InventoryPage.sortProductsHighToLow();
 });
 When("the user adds the cheapest and costliest items to the basket", () => {
   cy.get(".inventory_item:last-of-type .btn_inventory").click();
