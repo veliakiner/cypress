@@ -1,8 +1,12 @@
-# Requirements
-NPM and NPX.
-
 # Installation
-After cloning the repository:
+After cloning the repository, install npx:
+
+`npm install -g npx`
+
+Note: you may need to provide privileged access to npm in order to install npx.
+
+Then install the repository's dependencies:
+
 `npm install`
 
 # Usage
