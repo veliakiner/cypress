@@ -10,6 +10,8 @@ Then install the repository's dependencies:
 `npm install`
 
 # Usage
+To run the tests headlessly:
+
 `npm run test`
 
 # Debugging
