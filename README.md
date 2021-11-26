@@ -3,7 +3,7 @@ After cloning the repository, install npx:
 
 `npm install -g npx`
 
-Note: you may need to provide privileged access to npm in order to install npx. If you have it already installed, skip this step.
+Note: you may need to provide privileged access to npm in order to install npx. If you have it already installed, you'll probably get an error telling you it's already installed.
 
 Then install the repository's dependencies:
 
