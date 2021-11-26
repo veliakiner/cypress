@@ -4,7 +4,7 @@
   "description": "Write an end-to-end test using <member-of-cupressacae> and <member-of-cucurbitaceae>",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run --reporter junit --reporter-options 'mochaFile=results/my-test-output.xml,toConsole=true'",
+    "test": "npx cypress run --reporter mochawesome",
     "debug": "npx cypress open",
     "test-no-report": "npx cypress run"
   },
