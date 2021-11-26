@@ -1,3 +1,5 @@
+import inventoryItem from "./inventoryItem";
+
 class InventoryPage {
   url = cy.config().baseUrl + "/inventory.html";
 
@@ -9,6 +11,16 @@ class InventoryPage {
     return this.orderProductsDropdown().select("hilo");
   }
 
+  nthItem(index) {
+    return new inventoryItem(index)
+  }
 
+  firstItem() {
+    return this.nthItem(1)
+  }
+
+  lastItem() {
+    return this.nthItem(-1)
+  }
 }
 export default new InventoryPage();

@@ -14,8 +14,8 @@ Given("the products for sale are sorted by price descending", () => {
   InventoryPage.sortProductsHighToLow();
 });
 When("the user adds the cheapest and costliest items to the basket", () => {
-  cy.get(".inventory_item:last-of-type .btn_inventory").click();
-  cy.get(".inventory_item:first-of-type .btn_inventory").click();
+  InventoryPage.firstItem().addToBasket()
+  InventoryPage.lastItem().addToBasket()
 });
 When("the user checks out their basket", () => {
   cy.get("#shopping_cart_container").click();
