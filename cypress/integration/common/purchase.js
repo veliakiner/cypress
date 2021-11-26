@@ -16,18 +16,18 @@ Given("the products for sale are sorted by price descending", () => {
   InventoryPage.sortProductsHighToLow();
 });
 When("the user adds the cheapest and costliest items to the basket", () => {
-  InventoryPage.firstItem().addToBasket();
-  InventoryPage.lastItem().addToBasket();
+  InventoryPage.firstItem().addToBasketButton().click();
+  InventoryPage.lastItem().addToBasketButton().click();
 });
 When("the user checks out their basket", () => {
-  InventoryPage.goToBasket();
-  BasketPage.checkout();
+  InventoryPage.basketButton().click();
+  BasketPage.checkoutButton().click();
 });
 When("the user supplies their shipping details", () => {
   checkoutPage.submitShippingDetails("Flava", "Flav", "12345");
 });
 When("the user submits their purchase", () => {
-  checkoutPage.completePurchase();
+  checkoutPage.completePurchaseButton().click();
 });
 Then("the user sees a dispatch confirmation", () => {
   ConfirmationPage.confirmationMessage()

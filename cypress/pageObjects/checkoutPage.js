@@ -12,9 +12,5 @@ class CheckoutPage extends BasePage {
   completePurchaseButton() {
     return cy.get("#finish");
   }
-
-  completePurchase() {
-    return this.completePurchaseButton().click();
-  }
 }
 export default new CheckoutPage();

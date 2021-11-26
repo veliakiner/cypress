@@ -8,9 +8,5 @@ class InventoryItem {
   addToBasketButton() {
     return cy.get(this.baseSelector + " .btn_inventory");
   }
-
-  addToBasket() {
-    return this.addToBasketButton().click();
-  }
 }
 export default InventoryItem;

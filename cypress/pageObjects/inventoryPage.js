@@ -8,10 +8,6 @@ class InventoryPage extends BasePage {
     return cy.get("#checkout");
   }
 
-  checkout() {
-    return this.checkoutButton().click()
-  }
-
   orderProductsDropdown() {
     return cy.get('[data-test="product_sort_container"]');
   }
