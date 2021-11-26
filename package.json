@@ -1,0 +1,11 @@
+{
+  "name": "cypress-demo",
+  "version": "1.0.0",
+  "description": "Write an end-to-end test using <member-of-cupressacae> and <member-of-cucurbitaceae>",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "author": "",
+  "license": "ISC"
+}
