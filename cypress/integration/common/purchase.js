@@ -1,12 +1,13 @@
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
+import Inventorypage from "../../pageObjects/inventoryPage";
+import LoginPage from "../../pageObjects/loginPage";
+
 
 Given("a user is logged in to Saucedemo", () => {
   cy.visit("/");
   cy.fixture("user").then((user) => {
-    cy.get("#user-name").type(user.username);
-    cy.get("#password").type(user.password);
-    cy.get('[data-test="login-button"]').click();
-    cy.url().should("eq", cy.config().baseUrl + "/inventory.html");
+    LoginPage.login(user.username, user.password)
+    cy.url().should("eq", Inventorypage.url);
   });
 });
 Given("the products for sale are sorted by price descending", () => {
